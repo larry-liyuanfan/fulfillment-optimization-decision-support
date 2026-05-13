@@ -1,0 +1,5 @@
+scenario,orders,avg_items_per_order,avg_pick_minutes,avg_pack_minutes,avg_flow_sla_width,avg_volume_dm3,total_workload_minutes,peak_arrivals_in_period,total_wave_volume_capacity,total_wave_order_capacity
+base,120,2.142,6.966,3.01,3.75,3.996,1197.07,20,765.1,154
+promotion,145,2.145,7.002,3.045,2.966,4.057,1456.86,23,825.84,176
+tight_due_dates,125,2.112,6.857,2.989,2.096,3.984,1230.72,16,740.52,143
+labour_shortage,120,2.117,6.872,2.983,3.633,4.096,1182.61,18,765.1,154

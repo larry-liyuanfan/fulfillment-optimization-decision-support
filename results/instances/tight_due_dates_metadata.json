@@ -1,0 +1,21 @@
+{
+  "scenario_name":"tight_due_dates",
+  "scenario_description":"Nominal demand but tighter customer promises, so cycle time matters much more.",
+  "seed":314,
+  "public_sources":[
+    "https:\/\/www.aboutamazon.com\/workplace\/facilities",
+    "https:\/\/www.aboutamazon.com\/news\/operations\/how-do-amazon-packages-get-delivered",
+    "https:\/\/github.com\/zalandoresearch\/batching-benchmarks",
+    "https:\/\/www.mdpi.com\/0718-1876\/17\/4\/91",
+    "https:\/\/www.bls.gov\/oes\/2023\/May\/oes537065.htm"
+  ],
+  "order_count":125,
+  "avg_items_per_order":2.112,
+  "avg_pick_minutes":6.857,
+  "avg_pack_minutes":2.989,
+  "avg_total_volume_dm3":3.984,
+  "avg_slack_periods":2.096,
+  "total_pick_minutes":857.07,
+  "total_pack_minutes":373.65,
+  "total_volume_dm3":498.04
+}

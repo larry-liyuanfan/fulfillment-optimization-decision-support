@@ -1,0 +1,5 @@
+shift_name,start_period,end_period,length_hours,max_workers,cost_per_worker,coverage
+Dawn,0,5,6,5,105.0,"[1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]"
+Morning,2,7,6,7,105.0,"[0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]"
+Midday,4,9,6,7,105.0,"[0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]"
+Late,6,11,6,5,105.0,"[0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]"

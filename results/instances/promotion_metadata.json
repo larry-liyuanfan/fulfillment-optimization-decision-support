@@ -1,0 +1,21 @@
+{
+  "scenario_name":"promotion",
+  "scenario_description":"Promotion day with denser arrivals, more urgent orders, and heavier late-day pressure.",
+  "seed":142,
+  "public_sources":[
+    "https:\/\/www.aboutamazon.com\/workplace\/facilities",
+    "https:\/\/www.aboutamazon.com\/news\/operations\/how-do-amazon-packages-get-delivered",
+    "https:\/\/github.com\/zalandoresearch\/batching-benchmarks",
+    "https:\/\/www.mdpi.com\/0718-1876\/17\/4\/91",
+    "https:\/\/www.bls.gov\/oes\/2023\/May\/oes537065.htm"
+  ],
+  "order_count":145,
+  "avg_items_per_order":2.145,
+  "avg_pick_minutes":7.002,
+  "avg_pack_minutes":3.045,
+  "avg_total_volume_dm3":4.057,
+  "avg_slack_periods":2.966,
+  "total_pick_minutes":1015.31,
+  "total_pack_minutes":441.55,
+  "total_volume_dm3":588.3
+}

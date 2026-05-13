@@ -1,0 +1,9 @@
+scenario,model,status,objective_value,weighted_tardiness,weighted_flow_time,labour_cost,balance_deviation,active_waves,late_orders,total_tardiness_periods,mean_flow_time_periods,regular_worker_hours,temp_worker_hours,overtime_worker_hours,solve_time_seconds,mip_gap
+base,integrated_exact,OPTIMAL,1175.324,0.0,227.2,609.4,371.746667,10,0,0.0,1.216667,24.0,5.0,0.0,2.335976,0.0
+base,sequential_benchmark,OPTIMAL,841.02,0.0,208.2,704.92,453.666667,11,0,0.0,1.1,24.0,9.0,0.0,0.015674,0.0
+promotion,integrated_exact,OPTIMAL,1501.034,0.0,333.8,704.92,428.38,11,0,0.0,1.324138,24.0,9.0,0.0,3.770468,0.0
+promotion,sequential_benchmark,OPTIMAL,921.416,0.0,328.2,792.44,429.92,11,0,0.0,1.303448,24.0,13.0,0.0,0.012214,0.0
+tight_due_dates,integrated_exact,OPTIMAL,1301.054,0.0,278.4,661.16,276.98,11,0,0.0,1.224,24.0,7.0,0.0,0.375832,0.0
+tight_due_dates,sequential_benchmark,OPTIMAL,760.738,0.0,274.0,678.64,273.66,11,0,0.0,1.2,30.0,3.0,0.0,0.009729,0.0
+labour_shortage,integrated_exact,OPTIMAL,1176.9525,0.0,238.0,613.77,290.608333,10,0,0.0,1.266667,24.0,4.0,1.0,5.215837,0.0
+labour_shortage,sequential_benchmark,OPTIMAL,808.2065,0.0,223.4,704.89,344.388333,11,0,0.0,1.166667,30.0,3.0,1.0,0.010846,0.0

@@ -1,0 +1,9 @@
+scenario,model,active_waves,regular_worker_hours,temp_worker_hours,overtime_worker_hours,total_direct_worker_hours,peak_total_load_minutes,mean_total_load_minutes,mean_wave_order_util,mean_wave_volume_util,peak_wave_order_util,peak_wave_volume_util
+base,integrated_exact,10,24.0,5.0,0.0,29.0,137.36,99.755833,0.857143,0.687771,1.0,0.961587
+base,sequential_benchmark,11,24.0,9.0,0.0,33.0,153.52,99.755833,0.779221,0.619876,1.0,0.993732
+promotion,integrated_exact,11,24.0,9.0,0.0,33.0,171.6,121.405,0.823864,0.709,1.0,0.999874
+promotion,sequential_benchmark,11,24.0,13.0,0.0,37.0,166.97,121.405,0.823864,0.708426,1.0,0.986619
+tight_due_dates,integrated_exact,11,24.0,7.0,0.0,31.0,136.26,102.56,0.874126,0.671705,1.0,0.996936
+tight_due_dates,sequential_benchmark,11,30.0,3.0,0.0,32.0,130.69,102.56,0.874126,0.671203,1.0,0.970282
+labour_shortage,integrated_exact,10,24.0,4.0,1.0,29.0,130.69,98.550833,0.857143,0.707643,1.0,0.989365
+labour_shortage,sequential_benchmark,11,30.0,3.0,1.0,33.0,135.56,98.550833,0.779221,0.638631,1.0,0.918452

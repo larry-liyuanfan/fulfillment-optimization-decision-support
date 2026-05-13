@@ -1,0 +1,21 @@
+{
+  "scenario_name":"base",
+  "scenario_description":"Nominal same-day fulfilment day for one picking-and-packing department.",
+  "seed":42,
+  "public_sources":[
+    "https:\/\/www.aboutamazon.com\/workplace\/facilities",
+    "https:\/\/www.aboutamazon.com\/news\/operations\/how-do-amazon-packages-get-delivered",
+    "https:\/\/github.com\/zalandoresearch\/batching-benchmarks",
+    "https:\/\/www.mdpi.com\/0718-1876\/17\/4\/91",
+    "https:\/\/www.bls.gov\/oes\/2023\/May\/oes537065.htm"
+  ],
+  "order_count":120,
+  "avg_items_per_order":2.142,
+  "avg_pick_minutes":6.966,
+  "avg_pack_minutes":3.01,
+  "avg_total_volume_dm3":3.996,
+  "avg_slack_periods":3.75,
+  "total_pick_minutes":835.86,
+  "total_pack_minutes":361.21,
+  "total_volume_dm3":479.57
+}

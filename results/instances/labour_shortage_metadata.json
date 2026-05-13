@@ -1,0 +1,21 @@
+{
+  "scenario_name":"labour_shortage",
+  "scenario_description":"Same-day demand with reduced regular staffing and very limited recourse labour.",
+  "seed":2718,
+  "public_sources":[
+    "https:\/\/www.aboutamazon.com\/workplace\/facilities",
+    "https:\/\/www.aboutamazon.com\/news\/operations\/how-do-amazon-packages-get-delivered",
+    "https:\/\/github.com\/zalandoresearch\/batching-benchmarks",
+    "https:\/\/www.mdpi.com\/0718-1876\/17\/4\/91",
+    "https:\/\/www.bls.gov\/oes\/2023\/May\/oes537065.htm"
+  ],
+  "order_count":120,
+  "avg_items_per_order":2.117,
+  "avg_pick_minutes":6.872,
+  "avg_pack_minutes":2.983,
+  "avg_total_volume_dm3":4.096,
+  "avg_slack_periods":3.633,
+  "total_pick_minutes":824.61,
+  "total_pack_minutes":358.0,
+  "total_volume_dm3":491.55
+}

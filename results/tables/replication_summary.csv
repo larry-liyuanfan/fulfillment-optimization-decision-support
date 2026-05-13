@@ -1,0 +1,5 @@
+scenario,replications,mean_cost_saving_pct,std_cost_saving_pct,min_cost_saving_pct,max_cost_saving_pct,cost_saving_ci_low,cost_saving_ci_high,share_integrated_cheaper,sign_test_pvalue_cost_saving,mean_weighted_flow_time_change_pct,flow_time_ci_low,flow_time_ci_high,mean_balance_change_pct,balance_ci_low,balance_ci_high,share_balance_improved,share_zero_late_integrated,mean_feasibility_resamples,mean_integrated_solve_time_seconds
+base,10,11.450876,1.709752,8.742077,14.107594,10.462874,12.458418,1.0,0.000977,8.060735,6.387128,9.746747,-12.523369,-17.071485,-8.110926,1.0,1.0,0.0,4.184973
+promotion,10,12.564301,2.021251,10.045429,15.751316,11.416265,13.812473,1.0,0.000977,4.824728,3.629541,6.006452,-8.870296,-12.150347,-5.50939,1.0,1.0,0.0,5.042464
+tight_due_dates,10,5.212434,3.494969,0.0,11.759015,3.204986,7.325508,0.9,0.010742,2.691402,1.431626,3.960421,-1.517174,-3.919945,0.767966,0.6,1.0,0.2,0.358713
+labour_shortage,10,10.669493,3.359967,6.575211,16.130874,8.725492,12.750937,1.0,0.000977,6.152742,4.985611,7.276768,-8.10169,-11.883112,-3.740303,0.8,1.0,0.0,2.686823

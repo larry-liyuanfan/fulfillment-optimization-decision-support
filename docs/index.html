@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Integrated Fulfillment Optimization Decision Support</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5b6475;
+      --line: #d9e0ea;
+      --panel: #f6f8fb;
+      --accent: #1b6b77;
+      --accent-2: #9b5b20;
+      --good: #28724f;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 56px 0 28px;
+      border-bottom: 1px solid var(--line);
+      background: #f8fafc;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    main {
+      padding: 28px 0 52px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 840px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      min-height: 118px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--accent);
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 18px;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eef3f7;
+      color: #2f3a4c;
+      font-size: 13px;
+    }
+
+    td.num,
+    th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .result-good {
+      color: var(--good);
+      font-weight: 800;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .step {
+      padding: 14px;
+      border-left: 4px solid var(--accent-2);
+      background: #fbf7f1;
+      border-radius: 6px;
+      min-height: 120px;
+    }
+
+    .step b {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .figure-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+
+    footer {
+      padding: 26px 0 42px;
+      color: var(--muted);
+      font-size: 14px;
+      background: #f8fafc;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 860px) {
+      .metrics,
+      .grid,
+      .flow,
+      .figure-row {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Operations Research · Data Science · Decision Support</p>
+      <h1>Integrated Fulfillment Optimization Decision Support</h1>
+      <p class="subtitle">A full pipeline project that turns e-commerce order release and labor planning into a reproducible mixed-integer optimization workflow, with scenario experiments and solver diagnostics.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/larry-liyuanfan/fulfillment-optimization-decision-support#readme">Read Project README</a>
+        <a class="button" href="https://github.com/larry-liyuanfan/fulfillment-optimization-decision-support/blob/main/results/tables/model_comparison.csv">Model Comparison CSV</a>
+        <a class="button" href="https://github.com/larry-liyuanfan/fulfillment-optimization-decision-support/blob/main/reproducibility/Module4_TestDesign.md">Reproducibility Audit</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Portfolio Summary</h2>
+      <p class="lead">The project compares an integrated exact MIP against a two-stage exact benchmark across baseline, promotion, tight-due-date, and labor-shortage settings. It is packaged as a personal public project with synthetic, reproducible data and generated outputs.</p>
+      <div class="metrics" aria-label="Key metrics">
+        <div class="metric">
+          <strong>13.55%</strong>
+          <span>Largest baseline scenario labor-cost saving versus the sequential benchmark.</span>
+        </div>
+        <div class="metric">
+          <strong>39 / 40</strong>
+          <span>Replicated instances where the integrated model is cheaper.</span>
+        </div>
+        <div class="metric">
+          <strong>0</strong>
+          <span>Late orders in every integrated baseline and replication run.</span>
+        </div>
+        <div class="metric">
+          <strong>72 / 72</strong>
+          <span>Validation checks passed across assignment, release, capacity, balance, and tardiness rules.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experiment Results</h2>
+      <p class="lead">The integrated model reduces labor cost while preserving service feasibility. Weighted flow time may increase slightly because the model prioritizes zero tardiness and lower staffing peaks.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th class="num">Integrated Cost</th>
+            <th class="num">Sequential Cost</th>
+            <th class="num">Saving</th>
+            <th class="num">Saving %</th>
+            <th class="num">Late Orders</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>base</td>
+            <td class="num">609.40</td>
+            <td class="num">704.92</td>
+            <td class="num">95.52</td>
+            <td class="num result-good">13.55%</td>
+            <td class="num">0</td>
+          </tr>
+          <tr>
+            <td>promotion</td>
+            <td class="num">704.92</td>
+            <td class="num">792.44</td>
+            <td class="num">87.52</td>
+            <td class="num result-good">11.04%</td>
+            <td class="num">0</td>
+          </tr>
+          <tr>
+            <td>tight_due_dates</td>
+            <td class="num">661.16</td>
+            <td class="num">678.64</td>
+            <td class="num">17.48</td>
+            <td class="num result-good">2.58%</td>
+            <td class="num">0</td>
+          </tr>
+          <tr>
+            <td>labour_shortage</td>
+            <td class="num">613.77</td>
+            <td class="num">704.89</td>
+            <td class="num">91.12</td>
+            <td class="num result-good">12.93%</td>
+            <td class="num">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>From Baseline To Modules</h2>
+      <div class="flow">
+        <div class="step">
+          <b>Baseline</b>
+          <span>Generate calibrated synthetic orders, period capacities, and shift templates.</span>
+        </div>
+        <div class="step">
+          <b>Integrated MIP</b>
+          <span>Jointly optimize wave release, staffing, and pick/pack labor allocation.</span>
+        </div>
+        <div class="step">
+          <b>Sequential Benchmark</b>
+          <span>Build a two-stage exact baseline to isolate the value of integration.</span>
+        </div>
+        <div class="step">
+          <b>Scenario Analysis</b>
+          <span>Stress test promotion demand, tight service windows, and labor shortage.</span>
+        </div>
+        <div class="step">
+          <b>Reproducibility</b>
+          <span>Audit solver behavior, environment differences, validation checks, and raw outputs.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Highlights</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Business Algorithm Framing</h3>
+          <p>Converts a fulfillment planning process into a measurable decision system with costs, service levels, capacity rules, and labor flexibility.</p>
+        </div>
+        <div class="card">
+          <h3>Exact Optimization</h3>
+          <p>Uses Gurobi-backed MIP models and a carefully defined sequential benchmark rather than comparing against a weak heuristic.</p>
+        </div>
+        <div class="card">
+          <h3>Reproducible Analytics</h3>
+          <p>Exports scenario inputs, KPI tables, figures, validation summaries, and cross-environment diagnostics for auditability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Figures</h2>
+      <div class="figure-row">
+        <figure>
+          <img src="assets/experiment_kpi_comparison.png" alt="Experiment KPI comparison chart">
+          <figcaption>Scenario-level KPI comparison for integrated and sequential models.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/replication_study.png" alt="Replication study chart">
+          <figcaption>Replication study showing cost-saving stability across generated instances.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Built as a public portfolio version by Liyuan Fan. Data are synthetic or publicly calibrated; generated results are included for transparent review.</div>
+  </footer>
+</body>
+</html>

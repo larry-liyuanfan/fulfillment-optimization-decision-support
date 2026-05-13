@@ -1,0 +1,9 @@
+scenario,model,mean_residual_slack_periods,min_residual_slack_periods,share_orders_with_slack_le_1,share_orders_exactly_on_due_date,share_orders_with_slack_ge_2
+base,integrated_exact,2.533333,0.0,0.216667,0.108333,0.783333
+base,sequential_benchmark,2.65,0.0,0.183333,0.041667,0.816667
+promotion,integrated_exact,1.641379,0.0,0.427586,0.124138,0.572414
+promotion,sequential_benchmark,1.662069,0.0,0.413793,0.117241,0.586207
+tight_due_dates,integrated_exact,0.872,0.0,0.808,0.336,0.192
+tight_due_dates,sequential_benchmark,0.896,0.0,0.776,0.344,0.224
+labour_shortage,integrated_exact,2.366667,0.0,0.166667,0.075,0.833333
+labour_shortage,sequential_benchmark,2.466667,0.0,0.166667,0.025,0.833333
