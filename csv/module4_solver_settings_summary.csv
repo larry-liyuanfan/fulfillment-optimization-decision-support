@@ -1,0 +1,15 @@
+setting,value_found,explicitly_set
+TimeLimit,time_limit,True
+MIPGap,0.0,True
+Threads,1,True
+MIPFocus,1,True
+MIPFocus,2,True
+Heuristics,0.05,True
+Seed,,False
+OutputFlag,0,True
+default_time_limit_argument:solve_integrated_model,60,True
+default_time_limit_argument:_solve_staffing_subproblem,60,True
+default_time_limit_argument:_solve_sequential_wave_assignment,60,True
+default_time_limit_argument:solve_sequential_benchmark,60,True
+validation_export,validation_summary.csv via validate_result,True
+summary_interpretation,TimeLimit=explicit; MIPGap=explicit; Threads=explicit; Seed=not found,True

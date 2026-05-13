@@ -1,0 +1,9 @@
+scenario,model,mean_solve_time_seconds,min_solve_time_seconds,max_solve_time_seconds,labour_cost_unique_count,weighted_flow_time_unique_count,balance_deviation_unique_count,late_orders_unique_count,labour_cost_stable,weighted_flow_time_stable,balance_deviation_stable,late_orders_stable
+base,integrated_exact,1.781,1.749,1.838,1,1,1,1,True,True,True,True
+base,sequential_benchmark,0.013666666666666667,0.013,0.014,1,1,1,1,True,True,True,True
+labour_shortage,integrated_exact,3.4943333333333335,3.355,3.664,1,1,1,1,True,True,True,True
+labour_shortage,sequential_benchmark,0.011666666666666667,0.011,0.012,1,1,1,1,True,True,True,True
+promotion,integrated_exact,7.211333333333333,6.955,7.487,1,1,1,1,True,True,True,True
+promotion,sequential_benchmark,0.012000000000000002,0.012,0.012,1,1,1,1,True,True,True,True
+tight_due_dates,integrated_exact,0.4066666666666667,0.382,0.426,1,1,1,1,True,True,True,True
+tight_due_dates,sequential_benchmark,0.011333333333333334,0.009,0.013,1,1,1,1,True,True,True,True

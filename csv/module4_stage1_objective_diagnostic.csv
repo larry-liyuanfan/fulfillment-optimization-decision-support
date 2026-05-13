@@ -1,0 +1,4 @@
+source,weighted_tardiness,weighted_flow_time,active_waves,wave_opening_cost,stage1_objective
+mac_vendor,0.0,223.4,11,88.0,534.8
+windows_official,0.0,223.4,11,88.0,534.8
+difference_windows_minus_mac,0.0,0.0,0,0.0,0.0

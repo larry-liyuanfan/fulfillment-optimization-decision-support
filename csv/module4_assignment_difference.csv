@@ -1,0 +1,10 @@
+order_id,release_period_mac_vendor,release_period_windows_official,release_difference
+O001,2,3,1
+O032,3,2,-1
+O010,3,5,2
+O006,4,5,1
+O079,4,3,-1
+O007,5,4,-1
+O051,5,6,1
+O058,5,4,-1
+O047,6,5,-1

@@ -1,0 +1,3 @@
+environment,source_file,total_checks,passed_checks,failed_checks,max_abs_validation_value,all_passed,failed_check_names
+macOS vendored Gurobi,mac_validation_summary.csv,72,72,0,0.0,True,
+Windows official Gurobi,win_validation_summary.csv,72,72,0,0.0,True,

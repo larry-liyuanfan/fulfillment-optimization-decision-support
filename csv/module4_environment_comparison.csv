@@ -1,0 +1,4 @@
+environment,gurobi_source,vendor_status,labour_shortage_sequential_benchmark_cost,interpretation
+Windows venv,official installed Gurobi,failed: missing gurobipy._batch,748.65,Windows official-Gurobi result; internally stable
+Windows Anaconda,official installed Gurobi,failed: missing gurobipy._batch,748.65,Windows official-Gurobi result; internally stable
+macOS venv,vendored Gurobi,works after macOS security handling,704.89,matches report baseline
