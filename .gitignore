@@ -4,6 +4,7 @@ vendor/
 __pycache__/
 .ipynb_checkpoints/
 .mplconfig/
+.mplconfig-test/
 .DS_Store
 *.pyc
 *.pyo
