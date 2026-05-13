@@ -1,10 +1,10 @@
-# Optimization Solver Reproducibility
+# Optimization Solver Reproducibility and Validation
 
-This repository is a sanitized personal portfolio version of an optimisation validation project.
+This repository is a personal optimisation engineering project focused on solver reproducibility, validation auditing, and cross-environment result diagnosis.
 
 The project investigates why a two-stage sequential optimisation benchmark can produce different downstream labour costs across solver environments, even when repeated runs are internally stable and validation checks pass.
 
-It is positioned as a practical optimisation engineering project for business algorithm, operations research, and data science internship applications.
+It is positioned for business algorithm, operations research, and data science internship applications, where model correctness, reproducibility, and explainable diagnostics matter as much as the final objective value.
 
 ## Problem
 
@@ -22,12 +22,13 @@ Other scenarios and integrated model outputs were stable. The goal was to determ
 
 The analysis workflow includes:
 
-1. Run repeated consistency checks across scenarios and model variants.
-2. Summarise solve-time stability across repeated runs.
-3. Audit validation outputs for constraint violations.
-4. Compare macOS vendored-Gurobi and Windows official-Gurobi outputs.
-5. Diagnose the labour-shortage sequential benchmark discrepancy.
-6. Trace the downstream cost gap to staffing decisions and equivalent Stage-1 release plans.
+1. Implement and compare integrated and two-stage sequential optimisation benchmarks.
+2. Run repeated consistency checks across scenarios and model variants.
+3. Summarise solve-time stability across repeated runs.
+4. Audit validation outputs for constraint violations.
+5. Compare macOS vendored-Gurobi and Windows official-Gurobi outputs.
+6. Diagnose the labour-shortage sequential benchmark discrepancy.
+7. Trace the downstream cost gap to staffing decisions and equivalent Stage-1 release plans.
 
 ## Key Results
 
@@ -55,15 +56,17 @@ This suggests the environments selected different Stage-1-equivalent release pla
 - Diagnosed a cross-environment discrepancy without changing the core optimisation model.
 - Produced clean CSV tables, figures, memo text, and report-ready findings.
 - Recommended deterministic tie-breaking for strict cross-machine reproducibility.
+- Packaged the analysis as a reusable validation workflow for optimisation projects.
 
 ## Repository Structure
 
 ```text
 .
-├── csv/       # Cleaned validation and comparison tables
-├── figures/   # Portfolio-safe visual summaries
-├── scripts/   # Output generation and post-processing script
-├── docs/      # Memo, report section, and slide summary
+├── csv/          # Cleaned validation and comparison tables
+├── figures/      # Visual summaries
+├── raw_outputs/  # Source scripts and raw comparison/validation outputs
+├── scripts/      # Output generation and post-processing script
+├── docs/         # Memo, report section, and slide summary
 └── README.md
 ```
 
@@ -79,18 +82,26 @@ This suggests the environments selected different Stage-1-equivalent release pla
 
 ## How to Reproduce the Clean Outputs
 
-The script is included for transparency:
+The cleaned CSV and figure outputs can be regenerated from `raw_outputs/`:
 
 ```bash
 python scripts/generate_module4_outputs.py
 ```
 
-The original raw outputs are not included in this public repository. The checked-in `csv/` and `figures/` folders contain the sanitized outputs used for the portfolio summary.
+The checked-in `csv/` and `figures/` folders are generated from the source comparison and validation files in `raw_outputs/`.
+
+## Main Files
+
+| File | Purpose |
+|---|---|
+| `raw_outputs/models.py` | Optimisation model implementation used by the benchmark |
+| `raw_outputs/experiments.py` | Scenario experiment runner |
+| `scripts/generate_module4_outputs.py` | Post-processing script for validation tables and figures |
+| `csv/module4_validation_audit.csv` | Constraint validation audit summary |
+| `csv/module4_mac_vs_windows_kpi_comparison.csv` | Cross-environment KPI comparison |
+| `csv/module4_stage1_objective_diagnostic.csv` | Stage-1 objective diagnostic |
+| `docs/reproducibility_validation_memo.md` | Memo-style explanation of the key finding |
 
 ## Tech Stack
 
-Python, Pandas, Matplotlib, Gurobi-style optimisation output analysis, validation auditing, reproducibility diagnostics.
-
-## Confidentiality Note
-
-This is a sanitized personal project repository. It does not include team meeting files, virtual environments, original raw solver outputs, private course materials, or teammate-owned code.
+Python, Pandas, Matplotlib, Gurobi-style optimisation modeling, validation auditing, reproducibility diagnostics.
