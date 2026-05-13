@@ -1,5 +1,3 @@
-下面是你可以直接交的 **Module 4 Task Design** 版本。
-
 # Module 4 Task Design
 
 ## Solver Performance, Reproducibility, and Validation
