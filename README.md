@@ -1,6 +1,6 @@
 # Integrated Fulfillment Optimization Decision Support
 
-A personal decision-optimization project for e-commerce fulfillment planning. The project studies whether order wave release and workforce scheduling should be optimized jointly instead of sequentially, then validates the result across baseline, scenario, sensitivity, and reproducibility modules.
+A personal decision-optimization project for e-commerce fulfillment planning. The project studies whether order wave release and workforce scheduling should be optimized jointly instead of sequentially, then validates the result across baseline generation, scenario analysis, sensitivity checks, and reproducibility auditing.
 
 The repository is packaged as a public portfolio version: all data are synthetic or publicly calibrated, and the code is organized so the full experiment pipeline can be regenerated from the project root.
 
@@ -16,13 +16,13 @@ An e-commerce fulfillment department receives orders throughout a 12-period oper
 
 ## Project Scope
 
-| Module | Focus | Output |
+| Stage | Focus | Output |
 |---|---|---|
 | Baseline | Synthetic fulfillment instance generation with calibrated order, period, and shift tables | Reproducible scenario inputs |
-| Module 1 | Integrated MIP formulation for order-wave release and workforce allocation | `integrated_exact` model |
-| Module 2 | Two-stage exact sequential benchmark | `sequential_benchmark` model |
-| Module 3 | Scenario, sensitivity, service robustness, and replication experiments | KPI tables and figures |
-| Module 4 | Cross-environment reproducibility and solver-diagnostic audit | Validation memo, raw outputs, diagnostic CSVs |
+| Integrated planning | MIP formulation for order-wave release and workforce allocation | `integrated_exact` model |
+| Sequential benchmark | Two-stage exact release-then-staffing benchmark | `sequential_benchmark` model |
+| Experiment analysis | Scenario, sensitivity, service robustness, and replication experiments | KPI tables and figures |
+| Reproducibility audit | Cross-environment solver diagnostics and validation checks | Validation memo, raw outputs, diagnostic CSVs |
 
 ## Method
 
@@ -58,7 +58,7 @@ src/fulfillment_optim/     Core data generation, models, experiments, analysis, 
 results/instances/         Exported scenario inputs
 results/tables/            KPI, validation, replication, and sensitivity tables
 results/figures/           Generated visual outputs
-reproducibility/           Module 4 cross-environment audit package
+reproducibility/           Cross-environment solver audit package
 report/                    Markdown report and result analysis
 tests/                     Pipeline-level unit tests
 docs/                      Static frontend page for portfolio display

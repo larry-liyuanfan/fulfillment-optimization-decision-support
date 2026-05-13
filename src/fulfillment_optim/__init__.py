@@ -1,4 +1,4 @@
-# Utilities for the MAST90014 fulfilment-centre optimisation project
+# Utilities for the fulfillment optimization decision-support project
 from .analysis import export_advanced_analysis
 from .config import SCENARIOS, ScenarioConfig
 from .data_generation import FulfillmentInstance, generate_instance
